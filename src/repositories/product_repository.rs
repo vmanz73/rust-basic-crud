@@ -1,5 +1,5 @@
 use crate::models::product::{Product, ProductDTO};
-use sqlx::{PgPool, Row};
+use sqlx::PgPool;
 
 pub async fn create_product(pool: &PgPool, product: ProductDTO) -> Result<(), sqlx::Error> {
     sqlx::query!(
